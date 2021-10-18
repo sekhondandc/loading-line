@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #292929;
+}
+.line{
+    width: 200px;
+    height: 4px;
+    background: #000000;
+    position: relative;
+}
+.line::after{
+    content: '';
+    height: 100%;
+    background: #ffffff;
+    position: absolute;
+    animation: animate_line 2s ease-in infinite;
+}
+@keyframes animate_line {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
